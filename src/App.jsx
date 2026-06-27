@@ -8,7 +8,7 @@ import {
   FaWhatsapp,
   FaEnvelope,
   FaGithub,
-  FaLinkedin,
+  FaLinkedin, 
   FaDownload,
 } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
@@ -50,11 +50,44 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [hireCard, setHireCard] = useState(false);
    const [loadingDone, setLoadingDone] = useState(false);
+   const [message , setMessage]=useState('');
   const [cursor, setCursor] = useState({
     x: 0,
     y: 0,
   });
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  project: "",
+  message: "",
+});
 
+const handleChange = (e) => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleWhatsApp = () => {
+  const text = encodeURIComponent(`
+Hi Yokish,
+
+Name: ${form.name}
+
+Email: ${form.email}
+
+Project Type: ${form.project}
+
+Message:
+${form.message}
+  `);
+
+  window.open(
+    `https://wa.me/919123541243?text=${text}`,
+    "_blank"
+  );
+};
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -93,7 +126,21 @@ if (!loadingDone) {
   const downloadResume = () => {
     window.location.href = "/YOKISH_D.pdf";
   };
+ const handleSend = () => {
+    if (!message.trim()) {
+      alert("Please enter your message.");
+      return;
+    }
 
+    const text = encodeURIComponent(
+      `Hi Yokish,\n\n${message}\n\nRegards`
+    );
+
+    window.open(
+      `https://wa.me/YOUR_PHONE_NUMBER?text=${text}`,
+      "_blank"
+    );
+  };
   const highlights = [
     "⚡ 3+ Years Experience",
     "📱 React Native",
@@ -157,54 +204,11 @@ if (!loadingDone) {
           <FaGithub />
         </a>
 
-      </div>
-
-      {/* Navbar */}
-
-        {/* <header className="navbar">
-
-          <h2 className="logo">
-            YOKISH
-          </h2>
-
-          <nav>
-
-            <a href="#about">About</a>
-
-            <a href="#skills">Skills</a>
-
-            <a href="#experience">Experience</a>
-
-            <a href="#projects">Projects</a>
-
-            <a href="#contact">Contact</a>
-
-          </nav>
-
-          <div className="nav-buttons">
-
-            <button
-              className="theme-btn"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <FaSun /> : <FaMoon />}
-            </button>
-  {/* 
-            <button
-              className="resume-btn"
-              onClick={downloadResume}
-            >
-              <FaDownload />
-              Resume
-            </button> */}
-
-          {/* </div>
-
-        </header> */}
-        
+      </div> 
             <Header setDarkMode={setDarkMode} darkMode={darkMode}/>
       {/* HERO SECTION */}
-
+   
+    
       <section className="hero">
 
         <div className="hero-left">
@@ -225,7 +229,7 @@ if (!loadingDone) {
               2000,
               "Frontend Developer",
               2000,
-              "Mobile App Developer",
+              "Mobile App Dev eloper",
               2000,
             ]}
             wrapper="h2"
@@ -261,8 +265,8 @@ if (!loadingDone) {
             </a> */}
 
           {/* </div> */} 
-
-          {hireCard && (
+  
+          {/* {hireCard && (
 
             <div className="hire-card">
 
@@ -290,9 +294,28 @@ if (!loadingDone) {
 
             </div>
 
-          )}
+          )} */}
+                          {/* <div>
+      <h2>Let's Build Something Amazing Together 🚀</h2>
 
+      <p>
+        Looking for a React.js & React Native developer?
+        Leave a message and let's connect.
+      </p>
+
+      <textarea
+        placeholder="Type your message here..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+
+      <button onClick={handleSend}>
+        <FaWhatsapp />
+        Send via WhatsApp
+      </button>
+    </div> */}
         </div>
+   
 
         {/* <div className="hero-right">
 
@@ -305,6 +328,52 @@ if (!loadingDone) {
         </div> */}
 
       </section>
+      <section className="contact-form-card">
+
+  <h2>Hire Me 🚀</h2>
+
+  <p>
+    require job opportunity ?
+    I'd love to hear from you.Lets connect
+  </p>
+
+  {/* <input
+    type="text"
+    name="name"
+    placeholder="👤 Your name"
+    value={form.name}
+    onChange={handleChange}
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="📧 Email address"
+    value={form.email}
+    onChange={handleChange}
+  />
+
+  <input
+    type="text"
+    name="project"
+    placeholder="💼 Project type (Web / Mobile / Full Time)"
+    value={form.project}
+    onChange={handleChange}
+  /> */}
+
+  <textarea
+    name="message"
+    placeholder="✍️ Send a message...."
+    value={form.message}
+    onChange={handleChange}
+  />
+
+  <button onClick={handleWhatsApp}>
+    <FaWhatsapp />
+    SEND VIA WHATSAPP →
+  </button>
+
+</section>
             {/* ================= ABOUT ================= */}
 
       <section id="about" className="section">

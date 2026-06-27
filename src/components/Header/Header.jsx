@@ -16,7 +16,9 @@ const Header = ({setDarkMode,darkMode}) => {
 
   <div className="left">
     <h2 className="logo">YOKISH</h2>
+     <p className="title">Software Engineer | React.js & React Native</p>
   </div>
+  
 
   <nav>
     <a href="#about">About</a>

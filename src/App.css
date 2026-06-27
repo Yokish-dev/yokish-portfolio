@@ -589,6 +589,143 @@ box-shadow:
 
 }
 
+/* HIRE ME  */
+
+.hire-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+.contact-form-card{
+    width:100%;
+    max-width:700px;
+    margin-top:45px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    background:rgba(18,18,18,.7);
+    backdrop-filter:blur(18px);
+    margin-left: 18%
+}
+
+.contact-form-card h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.contact-form-card p{
+    color:#9ca3af;
+    margin-bottom:28px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea{
+    width:100%;
+    background:#121212;
+    color:white;
+    border:1px solid #2d2d2d;
+    border-radius:16px;
+    padding:18px 20px;
+    font-size:16px;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus{
+    outline:none;
+    border-color:#d6bf94;
+}
+
+.contact-form-card textarea{
+    min-height:170px;
+    resize:none;
+}
+
+.contact-form-card button{
+    width:100%;
+    padding:20px;
+    border:none;
+    border-radius:16px;
+    background:#d6bf94;
+    color:#111;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    transition:.3s;
+}
+
+.contact-form-card button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(214,191,148,.35);
+}
+
+/* / * ============= HIRE BOX * / */
+
+.hire-box{
+    margin-top:35px;
+    width:100%;
+    max-width:600px;
+    padding:24px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.hire-box h2{
+    margin-bottom:8px;
+    font-size:24px;
+}
+
+.hire-box p{
+    color:#94a3b8;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.hire-box textarea{
+    width:100%;
+    height:120px;
+    padding:16px;
+    border-radius:12px;
+    border:1px solid #334155;
+    background:transparent;
+    color:#fff;
+    resize:none;
+    font-size:15px;
+    outline:none;
+}
+
+.hire-box textarea:focus{
+    border-color:#22c55e;
+}
+
+.send-btn{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+    border:none;
+    border-radius:10px;
+    background:#25D366;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    transform:translateY(-3px);
+}
 /* =====================================================
    SECTION
 ===================================================== */
