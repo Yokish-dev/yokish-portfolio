@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./components/Loader/Loader";
+import Header from "./components/Header/Header";
 import "./App.css";
 import {
   FaMoon,
@@ -39,10 +40,10 @@ const projects = [
     title: "Pension Scheme Mobile App",
     desc: "Built a React Native application supporting Android(Kotlin) & iOS(Swift) with optimized performance.",
   },
-  {
-    title: "Portfolio Website",
-    desc: "Responsive personal portfolio with animations, dark mode and particle background.",
-  },
+  // {
+  //   title: "Portfolio Website",
+  //   desc: "Responsive personal portfolio with animations, dark mode and particle background.",
+  // },
 ];
 
 export default function App() {
@@ -159,7 +160,7 @@ if (!loadingDone) {
 
       {/* Navbar */}
 
-        <header className="navbar">
+        {/* <header className="navbar">
 
           <h2 className="logo">
             YOKISH
@@ -196,10 +197,11 @@ if (!loadingDone) {
               Resume
             </button> */}
 
-          </div>
+          {/* </div>
 
-        </header>
-
+        </header> */}
+        
+            <Header setDarkMode={setDarkMode} darkMode={darkMode}/>
       {/* HERO SECTION */}
 
       <section className="hero">

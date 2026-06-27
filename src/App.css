@@ -3,7 +3,7 @@
 html{scroll-behavior:smooth}
 body{font-family:Inter,sans-serif;background:#0f172a;color:#fff}
 .app{position:relative;overflow:hidden}
-
+/* 
 .navbar{
 position:sticky;top:0;z-index:100;
 display:flex;justify-content:space-between;align-items:center;
@@ -13,7 +13,7 @@ backdrop-filter:blur(12px)
 }
 .logo{font-size:24px;font-weight:700}
 nav{display:flex;gap:24px}
-nav a{color:#fff;text-decoration:none}
+nav a{color:#fff;text-decoration:none} */
 .hero{
 min-height:100vh;
 display:flex;align-items:center;
@@ -261,9 +261,9 @@ nav{display:none}
 }
 
 
-.navbar nav a::after {
+/* .navbar nav a::after {
   content: "";
-  position: absolute;
+  position: ab solute;
 
   width: 0;
   height: 2px;
@@ -295,7 +295,7 @@ nav{display:none}
   font-weight: 500;
   position: relative;
   transition: 0.3s;
-}
+} */
 /* ===== TECHNOLOGY BACKGROUND (UPGRADED) ===== */
 
 .tech-bg {
@@ -617,7 +617,7 @@ background:var(--primary);
 
 }
 
-.theme-btn{
+/* .theme-btn{
 
 width:48px;
 
@@ -649,7 +649,7 @@ transition:.35s;
 
 transform:rotate(180deg) scale(1.1);
 
-}
+} */
 
 /* =====================================================
    FLOATING CONTACT
@@ -1600,7 +1600,7 @@ animation:fadeIn .8s ease;
 }
 /* ================= NAVBAR FIX ================= */
 
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -1616,28 +1616,28 @@ animation:fadeIn .8s ease;
   z-index: 1000;
 
   border-bottom: 1px solid rgba(255,255,255,.08);
-}
+} */
 
 /* Logo always stable */
-.logo {
+/* .logo {
   font-size: 28px;
   font-weight: 700;
   color: var(--primary);
   flex-shrink: 0;
-}
+} */
 
 /* Desktop nav */
-.navbar nav {
+/* .navbar nav {
   display: flex;
   gap: 30px;
   align-items: center;
-}
+} */
 
 /* ================= MOBILE FIX ================= */
 
 @media (max-width: 768px) {
 
-  .navbar {
+  /* .navbar {
     height: auto;
     flex-direction: column;
     align-items: flex-start;
@@ -1650,7 +1650,7 @@ animation:fadeIn .8s ease;
   }
 
   /* nav becomes wrapped row OR hidden */
-  .navbar nav {
+  /* .navbar nav {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1662,14 +1662,17 @@ animation:fadeIn .8s ease;
   .navbar nav a {
     font-size: 14px;
     padding: 6px 10px;
-  }
+  } */ */
 
+  {
+
+  }
 }
 
 /* Extra small devices */
 @media (max-width: 480px) {
 
-  .navbar {
+  /* .navbar {
     padding: 10px 4%;
   }
 
@@ -1683,7 +1686,7 @@ animation:fadeIn .8s ease;
 
   .navbar nav a {
     font-size: 13px;
-  }
+  } */
 }
 /* =====================================================
    END
