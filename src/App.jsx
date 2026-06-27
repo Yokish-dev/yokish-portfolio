@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loader from "./components/Loader/Loader";
 import "./App.css";
 import {
   FaMoon,
@@ -47,7 +48,7 @@ const projects = [
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [hireCard, setHireCard] = useState(false);
-
+   const [loadingDone, setLoadingDone] = useState(false);
   const [cursor, setCursor] = useState({
     x: 0,
     y: 0,
@@ -77,6 +78,17 @@ export default function App() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoadingDone(true);
+  }, 2000);
+
+  return () => clearTimeout(timer);
+}, []);
+
+if (!loadingDone) {
+  return <Loader onFinish={() => setLoadingDone(true)} />;
+}
   const downloadResume = () => {
     window.location.href = "/YOKISH_D.pdf";
   };
@@ -94,8 +106,6 @@ export default function App() {
 
   return (
     <div className={`app ${darkMode ? "dark" : "light"}`}>
-
-      {/* Animated Cursor */}
 
       <div
         className="cursor"
