@@ -149,46 +149,46 @@ export default function App() {
 
       {/* Navbar */}
 
-      <header className="navbar">
+        <header className="navbar">
 
-        <h2 className="logo">
-          YOKISH
-        </h2>
+          <h2 className="logo">
+            YOKISH
+          </h2>
 
-        <nav>
+          <nav>
 
-          <a href="#about">About</a>
+            <a href="#about">About</a>
 
-          <a href="#skills">Skills</a>
+            <a href="#skills">Skills</a>
 
-          <a href="#experience">Experience</a>
+            <a href="#experience">Experience</a>
 
-          <a href="#projects">Projects</a>
+            <a href="#projects">Projects</a>
 
-          <a href="#contact">Contact</a>
+            <a href="#contact">Contact</a>
 
-        </nav>
+          </nav>
 
-        <div className="nav-buttons">
+          <div className="nav-buttons">
 
-          <button
-            className="theme-btn"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
-{/* 
-          <button
-            className="resume-btn"
-            onClick={downloadResume}
-          >
-            <FaDownload />
-            Resume
-          </button> */}
+            <button
+              className="theme-btn"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? <FaSun /> : <FaMoon />}
+            </button>
+  {/* 
+            <button
+              className="resume-btn"
+              onClick={downloadResume}
+            >
+              <FaDownload />
+              Resume
+            </button> */}
 
-        </div>
+          </div>
 
-      </header>
+        </header>
 
       {/* HERO SECTION */}
 
