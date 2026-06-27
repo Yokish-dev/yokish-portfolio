@@ -32,11 +32,11 @@ const skills = [
 const projects = [
   {
     title: "Insurance Web Portal",
-    desc: "Developed a scalable React.js Health Insurance Portal with reusable components and REST API integration.",
+    desc: "Developed a scalable React.js Health Insurance Portal with reusable components and REST API & GraphQL integration.",
   },
   {
     title: "Pension Scheme Mobile App",
-    desc: "Built a React Native application supporting Android & iOS with optimized performance.",
+    desc: "Built a React Native application supporting Android(Kotlin) & iOS(Swift) with optimized performance.",
   },
   {
     title: "Portfolio Website",
@@ -226,12 +226,13 @@ export default function App() {
 
           </p>
 
-          <div className="hero-buttons">
+          {/* <div className="hero-buttons">
 
             <button
               className="btn"
               onMouseEnter={() => setHireCard(true)}
               onMouseLeave={() => setHireCard(false)}
+              onClick={() => setHireCard(true)}
             >
               Hire Me
             </button>
@@ -246,7 +247,7 @@ export default function App() {
 
             </a> */}
 
-          </div>
+          {/* </div> */} 
 
           {hireCard && (
 
@@ -502,11 +503,11 @@ export default function App() {
 
               </p>
 
-              <button className="btn">
+              {/* <button className="btn">
 
                 View Details
 
-              </button>
+              </button> */}
 
             </div>
 
@@ -579,7 +580,7 @@ export default function App() {
             </a>
 
             <a
-              href="https://github.com/yourgithub"
+              href="https://github.com/Yokish-dev"
               target="_blank"
               rel="noreferrer"
             >
@@ -608,7 +609,7 @@ export default function App() {
 
         <p>
 
-          React Native | React JS Developer
+          React Native Developer | React JS Developer
 
         </p>
 
