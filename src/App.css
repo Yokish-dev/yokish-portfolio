@@ -2,18 +2,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Inter,sans-serif;background:#0f172a;color:#fff}
-.app{position:relative;overflow:hidden}
-/* 
-.navbar{
-position:sticky;top:0;z-index:100;
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 8%;
-background:rgba(15,23,42,.7);
-backdrop-filter:blur(12px)
+.app{
+    position:relative;
 }
-.logo{font-size:24px;font-weight:700}
-nav{display:flex;gap:24px}
-nav a{color:#fff;text-decoration:none} */
 .hero{
 min-height:100vh;
 display:flex;align-items:center;
@@ -85,7 +76,7 @@ border-top:1px solid rgba(255,255,255,.1)
 .blob{
 position:absolute;width:300px;height:300px;border-radius:50%;
 filter:blur(100px);animation:float 8s ease-in-out infinite;
-z-index:-1
+ z-index:1;
 }
 .blob1{background:#8b5cf6;top:100px;left:-100px}
 .blob2{background:#06b6d4;right:-100px;bottom:200px}
@@ -259,43 +250,6 @@ nav{display:none}
     transform: translateY(0);
   }
 }
-
-
-/* .navbar nav a::after {
-  content: "";
-  position: ab solute;
-
-  width: 0;
-  height: 2px;
-
-  left: 0;
-  bottom: -5px;
-
-  background: linear-gradient(
-    90deg,
-    #8b5cf6,
-    #06b6d4
-  );
-
-  transition: width 0.3s ease;
-}
-
-.navbar nav a:hover::after {
-  width: 100%;
-}
-
-.navbar nav {
-  display: flex;
-  gap: 30px;
-}
-
-.navbar nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s;
-} */
 /* ===== TECHNOLOGY BACKGROUND (UPGRADED) ===== */
 
 .tech-bg {
@@ -451,53 +405,9 @@ body.dark .navbar{
    NAVBAR
 ===================================================== */
 
-.navbar{
 
-position:fixed;
 
-top:0;
 
-left:0;
-
-right:0;
-
-height:80px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:0 8%;
-
-backdrop-filter:blur(15px);
-
-z-index:1000;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.logo{
-
-font-size:28px;
-
-font-weight:700;
-
-color:var(--primary);
-
-letter-spacing:2px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:35px;
-
-}
 
 nav a{
 
@@ -616,40 +526,6 @@ flex-direction :row;
 background:var(--primary);
 
 }
-
-/* .theme-btn{
-
-width:48px;
-
-height:48px;
-
-border:none;
-
-border-radius:50%;
-
-cursor:pointer;
-
-font-size:20px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:linear-gradient(135deg,#00d4ff,#6c63ff);
-
-color:white;
-
-transition:.35s;
-
-}
-
-.theme-btn:hover{
-
-transform:rotate(180deg) scale(1.1);
-
-} */
 
 /* =====================================================
    FLOATING CONTACT
@@ -1144,7 +1020,7 @@ filter:blur(90px);
 
 opacity:.25;
 
-z-index:-2;
+/* z-index:-2; */
 
 animation:blobMove 18s infinite alternate;
 
@@ -1460,32 +1336,6 @@ height:320px;
 
 }
 
-@media (max-width:900px){
-
-.navbar{
-
-padding:18px 5%;
-
-flex-wrap:wrap;
-
-height:auto;
-
-gap:20px;
-
-}
-
-nav{
-
-width:100%;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:18px;
-
-}
-
 .gradient-text{
 
 font-size:52px;
@@ -1504,7 +1354,6 @@ padding:90px 5%;
 
 }
 
-}
 
 @media (max-width:600px){
 
@@ -1577,13 +1426,16 @@ font-size:32px;
 /* =====================================================
    PARTICLE LAYER
 ===================================================== */
-
+/* 
 canvas{
-position:fixed;
-left:0;
-top:0;
-z-index:-3;
-}
+   position:fixed !important;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    pointer-events:none;
+} */
 
 /* =====================================================
    SMOOTH ANIMATION
@@ -1597,93 +1449,6 @@ scroll-behavior:smooth;
 .project,
 .skill{
 animation:fadeIn .8s ease;
-}
-/* ================= NAVBAR FIX ================= */
-
-/* .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 8%;
-  backdrop-filter: blur(15px);
-  z-index: 1000;
-
-  border-bottom: 1px solid rgba(255,255,255,.08);
-} */
-
-/* Logo always stable */
-/* .logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--primary);
-  flex-shrink: 0;
-} */
-
-/* Desktop nav */
-/* .navbar nav {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-} */
-
-/* ================= MOBILE FIX ================= */
-
-@media (max-width: 768px) {
-
-  /* .navbar {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 5%;
-    gap: 10px;
-  }
-
-  .logo {
-    font-size: 22px;
-  }
-
-  /* nav becomes wrapped row OR hidden */
-  /* .navbar nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px;
-    padding-bottom: 10px;
-  }
-
-  .navbar nav a {
-    font-size: 14px;
-    padding: 6px 10px;
-  } */ 
-
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-
-  /* .navbar {
-    padding: 10px 4%;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .navbar nav {
-    gap: 10px;
-  }
-
-  .navbar nav a {
-    font-size: 13px;
-  } */
 }
 /* =====================================================
    END

@@ -106,6 +106,8 @@ if (!loadingDone) {
   ];
 
   return (
+    <>
+      <ParticlesBackground />
     <div className={`app ${darkMode ? "dark" : "light"}`}>
 
       <div
@@ -116,7 +118,6 @@ if (!loadingDone) {
         }}
       ></div>
 
-      <ParticlesBackground />
 
       {/* Background Blobs */}
 
@@ -634,7 +635,7 @@ if (!loadingDone) {
       </footer>
 
     </div>
-
+</>
   );
 
 }
